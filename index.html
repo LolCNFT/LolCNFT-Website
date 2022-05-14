@@ -37,6 +37,10 @@
     <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png?v=2">
     <meta name="msapplication-config" content="/img/favicons/browserconfig.xml?v=2">
     <meta name="theme-color" content="#000000">
+    <!-- Preload -->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="https://drive.google.com/uc?id=1w9rEgEZ3nk0hisVkeJWsGMus7yuVFejo" as="image">
     <!-- Links -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,21 +59,50 @@
         
       </div>
 
-        
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
       </div>
 </header>
 <body>
-  <section class="section-1">
-    <div>
-      <div>
-
+  <section id="home" class="section-1">
+    <div class="main-text">
+      <div class="main-title">
+        <div class="container">
+          Welcome to
+          <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">LolCNFT</span>
+            <span style="--index: 1;">LolCNFT</span>
+            <span style="--index: 2;">LolCNFT</span>
+          </div>
+          <span class="right">Website</span>
+        </div>
+        <button  onclick="window.location.href = '#NFT'"><span class="button_top">Buy NFT</span></button>
+        <button onclick="window.location.href = '#design'"><span class="button_top">Design my Website</span></button>
       </div>
       <a href="#NFT">
         <div class="scroll-down"></div>
       </a>
     </div>
   </section>
-  <section id="NFT" class="section-2" style="height: 1000px;">
+  <section id="NFT" class="section-2" style="transition-duration: 2s;">
+    <div  class="sub-title">
+      <h2>Check NFT!</h2>
+      <hr>
+      <h6></h6>
+    </div>
+    <div class="banner">
+      <div id="image-banner" class="image-banner-1" href="witb.html">
+        <!-- <div class="title-nft">
+          <h3>What's In The Box?</h3>
+        </div> -->
+      </div>
+      <div id="image-banner-2" class="image-banner-2" href="witb.html">
+        <div class="title-nft">
+          <h3>Yggdrasil Collection</h3>
+        </div>
+      </div>
+    </div>
 
   </section>
 
@@ -83,7 +116,8 @@
       <h2>Design your Website!</h2>
       <h6></h6>
     </div>
-    <div class="grid-pie">
+    <embed src="http://www.pixellinks.golf" style="width:500px; height: 700px;" >
+    <!-- <div class="grid-pie">
       <div class="a1">
         <div class="pie animate" style="--p:95;--c:rgb(34, 241, 34); --b:10px"> 95%</div>
         <h4>HTML5</h4>
@@ -100,7 +134,7 @@
         <div class="pie animate" style="--p:20;--c:rgb(243, 58, 34); --b:10px"> 20%</div>
         <h4>Wallet Integration</h4>
       </div>
-    </div>
+    </div> -->
 
 </section>
   
@@ -109,7 +143,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <!-- <h3>MOSIE-MARKS INC</h3> -->
+            <h3>Contact me</h3>
             <ul class="social-foot">
               <li><a target="_blank" href="#"><i class="fa-brands fa-twitter"></i></a></li>
               <li><a target="_blank" href="#"><i class="fa-brands fa-discord"></i></a></li>
