@@ -222,7 +222,7 @@
   --clip-top: calc(var(--stack-height) * var(--index));
   --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
   clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 540ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 3s ease infinite 3s alternate-reverse;
+  animation: stack 540ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 1s alternate-reverse;
 }
 
 .stack span:nth-child(odd) { --glitch-translate: 8px; }
@@ -275,9 +275,14 @@ button {
  border: none;
  border-radius: var(--button_radius);
  background: var(--button_outline_color);
- margin-top: 3rem;
 }
-
+.nft-button{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.design-button{
+  margin-bottom: 2rem;
+}
 .button_top {
  display: block;
  box-sizing: border-box;
@@ -288,6 +293,7 @@ button {
  color: var(--button_outline_color);
  transform: translateY(-0.2em);
  transition: transform 0.1s ease;
+
 }
 
 button:hover .button_top {
@@ -305,11 +311,17 @@ button:active .button_top {
   width: 50px;
   border: 4px solid rgb(171, 255, 255);
   position: absolute;
-  left: 50%;
-  bottom: 20px;
+  z-index: 1;
+  bottom: 30px;
   border-radius: 50px;
   cursor: pointer;
   animation: colorful 20s ease-in-out  infinite;
+  margin-top: 3rem;
+}
+.scroll-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .scroll-down::before,
 .scroll-down::after {
@@ -386,6 +398,8 @@ button:active .button_top {
   color: white;
   height: max-content;
   padding: 2rem;
+  z-index: 2;
+  position: relative;
 }
 .banner{
   width: 100%;
