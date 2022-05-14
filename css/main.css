@@ -29,13 +29,10 @@
   font-family: 'font-body';
   src: url(/font/HelveticaNowText-Regular.ttf);
 }
-:root{
-  --background: rgba(0,0,0,0);
-}
   
   html, body {font-family: 'font-title'; overflow-x: hidden; scroll-behavior: smooth; 
   }
-  body{background-color: var(--background);}
+  body{background-color: #000;}
   * {
      margin: 0;
      padding: 0;
@@ -463,30 +460,9 @@ button:active .button_top {
     /*-----------------------------------------------------------
   15. Section-3
 -------------------------------------------------------------*/
-.grid-pie {
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 10px 10px; 
-  grid-template-areas: 
-    "a1 a2 a3 a4"; 
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
-    align-content: center;
+.section-3{
+  background-color: #000;
 }
-.a1, .a2, .a3, .a4 {
-  justify-self: center; 
-  align-self: center; 
-  grid-area: a1; 
-  width: 90%; 
-  height: 85%; 
-}
-.a1 { grid-area: a1; }
-.a2 { grid-area: a2; }
-.a3 { grid-area: a3; }
-.a4 { grid-area: a4; }
     /*-----------------------------------------------------------
   15. Sub-title
 -------------------------------------------------------------*/
@@ -512,7 +488,7 @@ hr{
   background-color: #fff;
 
 }
-.sub-title:after {
+/* .sub-title:after {
   display: block;
   content: url(/img/favicons/favicon-32x32.png);
   align-content: center;
@@ -525,7 +501,7 @@ hr{
   flex-direction: column;
   align-items: center;
   transform: scale(0.7);
-}
+} */
 @media screen and (max-width: 768px) {
   .container-1 h1{
     font-size: 2rem;
@@ -576,14 +552,17 @@ hr{
 /*-----------------------------------------------------------
   8. Footer
 -------------------------------------------------------------*/
-
+.pre-footer{
+  width: 100%;
+  margin-bottom: 2rem;
+}
 footer {
   background-color: #000000;
   background-size: 10rem;
   width: 100%;
-  min-height: 250px;
+  height: 100%;
   text-align: center;
-  padding: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 footer h5{
   color: #fff;
@@ -592,43 +571,116 @@ footer h5{
 footer h3{
   color: #72f572;
   font-size: 3rem;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 footer h6 {
   color: #fff;
   font-size: 0.9rem;
   font-weight: 400;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-.social-foot{
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-.social-foot li {
-  display: inline;
-}
-.social-foot li a {
-  font-size: 2.7rem;
-  color: #fff;
-  margin: 0px 30px;
 
 }
-.social-foot li a:hover {
-  color: #00acee;
-  transition: all 0.3s ease;
+span a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 1rem 10px;
+  transition: all 0.4s ease-in-out;
 }
-.fa-discord:hover{
-  color: rgb(88 101 242);
+span a:hover {
+  color: #ffffff;
 }
 
- 
-.text-foot{
+@-webkit-keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+    transform: translatey(0px);
+  }
+}
+.container-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+h2{
+  color: white;
+  margin-bottom: 1rem;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px rgb(255, 87, 233) solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+          margin-bottom: .5rem;
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
+.fa:hover{
+  cursor: pointer;
+}
+.fa-twitter:hover{
+  color: #1DA1F2;
+}
+.fa-github:hover{
+  color: #000000;
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+.fa-discord:hover{
+  color:  #5865F2;
+}
+.fa-envelope:hover{
+  color: #F4B400;
+}
+
 
     /*-----------------------------------------------------------
   15. Signature
@@ -700,3 +752,109 @@ footer h6 {
 @keyframes p{
   from{--p:0;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bb::before, .bb::after{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background: url(/img/Logo1.25.png) no-repeat;
+  background-size: contain;
+  color: #69ca62;
+  box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+  transform: scale(0.3);
+  margin-top: -3rem;
+}
+.bb::before, .bb::after {
+  content: "";
+  z-index: -1;
+  margin: -5%;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+.bb::before {
+  animation-delay: -4s;
+}
+
+
+
+@keyframes clipMe {
+  0%, 100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 220px, 0px);
+  }
+  50% {
+    clip: rect(218px, 220px, 220px, 0px);
+  }
+  75% {
+    clip: rect(0px, 220px, 220px, 218px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
