@@ -151,7 +151,7 @@
     height: calc(100% + 4px);
     animation: glowingbn5 20s linear infinite;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    /* transition: opacity 0.3s ease-in-out; */
     border-radius: 10px;
   }
   
@@ -179,7 +179,9 @@
   .bn5:hover:before {
     opacity: 1;
   }
-  
+  .bn5:hover:after{
+    background-color: #000;
+  }
   .bn5:after {
     z-index: -1;
     content: "";
@@ -226,14 +228,8 @@
       display: block;
       text-align: center;
     }
-    .topnav.responsive button{
-      float: none;
-      display: block;
-      text-align: center;
-      margin-top: .5rem;
-      width: 100%;
-    }
   }
+  .logo-bar:hover{cursor: pointer;}
 /*-----------------------------------------------------------
   4. section-1
 ------------------------------------------------------------*/
