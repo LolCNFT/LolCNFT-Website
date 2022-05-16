@@ -176,7 +176,7 @@
         <div class="txt2"><h1 class="txt3">Click Mint!<span>&#160;</span></h1></div>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center;">
-          <a id="myBtn" target="_blank" class="a mintt">Mint!</a>
+          <a id="myBtn" target="_blank" class="a mintt bn5">Mint!</a>
           <p class="policy">Policy ID: <span id="copy" class="copy-txt tooltip" style="overflow-wrap: break-word; margin: 0 1rem;">5ded942a9ae524354dbba9101cc8705b5d1926238eb55b1e3415fcbd<span class="tooltiptext">Copy</span></span</p>
         <h1 class="info">Click & hold on the top face!</h1>
       </div>
@@ -189,12 +189,13 @@
 <div class="modal-content">
   <div class="modal-header">
     <span class="close">&times;</span>
-    <h2>Mint What's in the box? </h2>
+    <h2 style="color: black;">Mint What's in the box? </h2>
     <h4>Wave 5:</h4>
   </div>
   <div class="modal-body">
     <p>Send 50 ADA to</p>
-    <p>Some other text...</p>
+    <input readonly type="text" class=" copiar" style="margin: .5rem .3rem; font-size: 1.3rem; width: 90%; text-align: center;" value="addr1qxpfdhue4yzevwpcxg6fqydlfaq26s07gq405sl9vxlnkj2h4l6znv4xzt75w6xmkflj9p29ll58ld0sjxpql7ug2g8s69ln09" id="myInput">
+    <button class="bn5" style="background-color: black; margin:.5rem 0;" onclick="myFunctionCopy()">Copy</button>
   </div>
   <div class="modal-footer">
     <h3>Thank you! More news coming soon!</h3>
@@ -205,78 +206,13 @@
     <section class="footer" id="contact">
       <footer class="foot">
         <hr class="pre-footer">
-            <h6 class="pre-sign" style="width: 100%;"><a class="lol hero2 glitch layers" data-text="LolCNFT" href="#home" target="_blank"><span>© 2022 - LolCNFT</span></a></h6>
+            <h6 class="pre-sign" style="width: 100%;"><a class="lol hero2 glitch layers" data-text="LolCNFT" href="index.html#home"><span>© 2022 - LolCNFT</span></a></h6>
       
           </div>
         </div>
          </footer>
 </section>
-<script type="text/javascript">
 
-    let bandera = 0;
-
-    function myFun() {
-      if (bandera == 0) {
-        bandera = 1;
-        var ob = document.getElementById("front");
-        ob.classList.add("base64");
-        var ob = document.getElementById("rightt");
-        ob.classList.add("base64");
-        var ob = document.getElementById("left");
-        ob.classList.add("base64");
-        var ob = document.getElementById("backk");
-        ob.classList.add("base64");
-        var ob = document.getElementById("coverleft");
-        ob.classList.add("base64");
-        var ob = document.getElementById("coverright");
-        ob.classList.add("base64");
-        var ob = document.getElementById("coverfront");
-        ob.classList.add("base64");
-        var ob = document.getElementById("coverback");
-        ob.classList.add("base64");
-      }else{
-        bandera = 0;
-        var ob = document.getElementById("front");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("rightt");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("left");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("backk");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("coverleft");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("coverright");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("coverfront");
-        ob.classList.remove("base64");
-        var ob = document.getElementById("coverback");
-        ob.classList.remove("base64"); 
-      }
-    }
-
-   // const clases = ["bkk", "bkk2", "bkk3", "bkk4"];
-
-//const random = clases[Math.floor(Math.random() * clases.length)];
-
-    function myFun2() {
-  
-      if (bandera == 0) {
-    
-        bandera = 1;
-        var ob = document.getElementById("bk");
-        ob.classList.add('bkk');
-    }
-
-    else{
-        bandera = 0;
-        var ob = document.getElementById("bk");
-        ob.classList.remove('bkk');
-       
-      }
-    }
-
-</script>
 
 
 
@@ -286,6 +222,7 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="js/witb.js"></script>
 
 
 

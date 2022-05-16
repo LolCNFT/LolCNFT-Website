@@ -37,10 +37,6 @@
     <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png?v=2">
     <meta name="msapplication-config" content="/img/favicons/browserconfig.xml?v=2">
     <meta name="theme-color" content="#000000">
-    <!-- Preload -->
-    <link rel="preload" href="/css/main.css" as="style">
-    <link rel="preload" href="/js/main.js" as="script">
-    <link rel="preload" href="https://drive.google.com/uc?id=1w9rEgEZ3nk0hisVkeJWsGMus7yuVFejo" as="image">
     <!-- Links -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -99,7 +95,7 @@
           <h6>100% code generated NFTs! Interactive inside your wallet! Find out what you got!</h6>
         </div>
       </div>
-      <div id="image-banner-2" class="image-banner-2 image-banner " href="witb.html">
+      <div id="image-banner-2" class="image-banner-2 image-banner " onclick="window.location.href = 'yggdrasil.html'">
         <div class="title-nft" style="font-family: 'viking';">
           <h3 style="margin-bottom: 2rem; ">Yggdrasil Collection</h3>
           <h6>Collection of the Viking era. Includes 3D assets and AI Generated landscapes! Merge yourself into this amazing era, learn from the stories written in the NFTs!</h6>
@@ -111,11 +107,12 @@
           <h6>3D coin designed for Cardano lovers! At only 7 ADA!</h6>
         </div>
       </div>
-      <div id="image-banner-4" class="image-banner-4 image-banner " href="witb.html">
+      <div id="image-banner-4" class="image-banner-4 image-banner " onclick="alert1()">
         <div class="title-nft pirates" style="font-family: 'pirate'; font-weight: 100;">
           <h3 style="margin-bottom: 2rem; ">The Queen Anne's Revenge</h3>
-          <h6>Pirate era Sold-Out!</h6>
+          <h6 >Pirate era Sold-Out!</h6>
         </div>
+        <h2 style="font-family: 'pirate';" id="alert" class="alert"></h2>
       </div>
     </div>
 
@@ -157,8 +154,8 @@
       <hr class="pre-footer">
       <div class="container-4">
         <div class="avatar">
-          <a href="#home">
-            <img src="https://bafybeibi74lgqgl5n224cutkmeurfdtnx6psenrr2qekhdcrup4v6ncbhu.ipfs.infura-ipfs.io/" alt="pfp" />
+          <a class="pfp" id="linkProject">
+            <img id="mainPhoto" src="https://bafybeigon75dp62reukaoftuyk32jqu4nbx26qxl6p6sm76zjmewegoiye.ipfs.infura-ipfs.io/"  alt="pfp" />
           </a>
         </div>
         <div class="content-foot">
@@ -170,7 +167,8 @@
             <span><a class="social_icons" href="https://discord.gg/WCHw8Jrhxq" target="_blank"><i class="fa-brands fa-discord"></i></a></span>
             <span><a class="social_icons" href="mailto:lolcnft@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></span>
           </p>
-          <h6 class="pre-sign"><a class="lol hero2 glitch layers" data-text="LolCNFT" href="#home" target="_blank"><span>© 2022 - LolCNFT</span></a></h6>
+          <h6 style="color: white; margin-top:.5rem;">$absentfather</h6>
+          <h6 class="pre-sign"><a class="lol hero2 glitch layers" data-text="LolCNFT" href="#home"><span>© 2022 - LolCNFT</span></a></h6>
     
         </div>
       </div>
@@ -179,7 +177,6 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 
 
 </body>

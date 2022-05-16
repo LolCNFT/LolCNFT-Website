@@ -58,60 +58,33 @@ $("#image-banner-4").mousemove(function(e){
 });
   });
 
-  //copy txt
-  function copyTextToClipboard(text) {
-    if (!navigator.clipboard) {
-      fallbackCopyTextToClipboard(text);
-      return;
-    }
-    navigator.clipboard.writeText(text).then(
-      function() {
-        console.log("Async: Copying to clipboard was successful!");
-      },
-      function(err) {
-        console.error("Async: Could not copy text: ", err);
-      }
-    );
-  }
-
-  try {
-    var successful = document.execCommand("copy");
-    var msg = successful ? "successful" : "unsuccessful";
-    console.log("Fallback: Copying text command was " + msg);
-  } catch (err) {
-    console.error("Fallback: Oops, unable to copy", err);
-  }
-  var copyBtn = document.querySelector(".copy-txt");
-
-copyBtn.addEventListener("click", function(event) {
-  copyTextToClipboard('5ded942a9ae524354dbba9101cc8705b5d1926238eb55b1e3415fcbd');
-});
 
 /*-----------------------------------------------------------
-2. Modal
+2. PFP
 -------------------------------------------------------------*/
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+let images = ['https://bafybeibi74lgqgl5n224cutkmeurfdtnx6psenrr2qekhdcrup4v6ncbhu.ipfs.infura-ipfs.io/', 'https://bafybeicqeo4lfn54kqj6axwrhyw2mdev6h3jonl6qmltc3hip5etzvr74a.ipfs.infura-ipfs.io/', 'https://bafybeiazdoy6fdi4fqc5ssxmj6f26qaucm6no5fxrd5clgqdowi7xhabgu.ipfs.infura-ipfs.io/', 'https://bafybeibjp5ajtfudanpla7ylhrjrtqdlqmeiaia6y2jrbnokq5yo5lzng4.ipfs.infura-ipfs.io/', 'https://bafybeigon75dp62reukaoftuyk32jqu4nbx26qxl6p6sm76zjmewegoiye.ipfs.infura-ipfs.io/'];
+// let link = ['https://twitter.com/UglybrosNFT', 'https://twitter.com/BlockOwls', 'https://twitter.com/_nemonium', 'https://twitter.com/MosieAlong', 'https://twitter.com/CryptoRaggies'];
+let index = 0;
+const imgElement = document.querySelector('#mainPhoto');
+// const imageLink = document.getElementById('#linkProject')
+function change() {
+   imgElement.src = images[index];
+   index > 3 ? index = 0 : index++;
 }
+window.onload = function () {
+    setInterval(change, 7000);
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
+function alert1(){
+  document.getElementById("alert").innerHTML="Sold Out!";
+  document.getElementById("alert").style.backgroundColor="black";
+  
+  setTimeout(function(){
+    document.getElementById("alert").innerHTML="";
+  document.getElementById("alert").style.backgroundColor="transparent";
+
+    },3000);
+
+   }

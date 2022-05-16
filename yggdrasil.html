@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metas -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LolCNFT" />
+     <!-- Document Title -->
+    <!-- Primary Meta Tags -->
+    <title>LolCNFT</title>
+    <meta name="title" content="LolCNFT">
+    <meta name="description" content="">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lolcnft.com">
+    <meta property="og:title" content="LolCNFT">
+    <meta property="og:description" content="">
+    <meta property="og:image" itemprop="image primaryimageofpage" content="">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.lolcnft.com/">
+    <meta property="twitter:title" content="LolCNFT">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="194x194" href="/img/favicons/favicon-194x194.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicons/android-chrome-192x192.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png?v=2">
+    <link rel="manifest" href="/img/favicons/site.webmanifest?v=2">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg?v=2" color="#000000">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico?v=2">
+    <meta name="apple-mobile-web-app-title" content="LolCNFT">
+    <meta name="application-name" content="LolCNFT">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png?v=2">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml?v=2">
+    <meta name="theme-color" content="#000000">
+    <!-- Links -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9be2f7ec29.js" crossorigin="anonymous"></script>
+    <!-- <script src="/js/app.js" type="module"></script> -->
+</head>
+<header id="header">
+  <img id="logo" class="logo-bar" src="/img/favicons/android-chrome-512x512.png" width="52px">
+    <div class="topnav" id="myTopnav">
+        
+      <div class="topnav-child">
+        <a href="index.html#home" class="bn5">Home</a>
+        <a href="index.html#NFT" class="bn5">NFTs</a>
+        <a href="index.html#design" class="bn5">Design</a>
+        <a href="index.html#contact" class="bn5">Contact</a>
+        
+      </div>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      </div>
+</header>
+<body>
+  <section id="home" class="section-1 yggdrasil-bk" style="background-image: url(https://drive.google.com/uc?id=1r7o1mQxSL5znrhJ6zyEgyJTD2NRUFRxU);">
+    <div class="main-text">
+      <div class="main-title">
+        <div class="container" style="font-family: 'viking'; font-size: 4rem; text-align: center;">
+         The Yggdrasil Collection
+        </div>
+        <img src="https://pro.nft-maker.io/images/buttons/paybutton_1_1.svg" class="mint-viking" onclick="javascript:openPaymentWindow()">
+
+<script type="text/javascript">
+            function openPaymentWindow() {
+                const paymentUrl = "https://payment.nft-maker.io/?p=ba2cdb898dfb4694917be95a65fafbea&c=1";
+
+                // Specify the popup width and height
+                const popupWidth = 500;
+                const popupHeight = 700;
+
+                // Calculate the center of the screen
+                const left = window.top.outerWidth / 2 + window.top.screenX - ( popupWidth / 2);
+                const top = window.top.outerHeight / 2 + window.top.screenY - ( popupHeight / 2);
+
+                const popup =  window.open(paymentUrl, "NFT-MAKER PRO Payment Gateway",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
+
+                // Show dim background
+                document.body.style = "background: rgba(0, 0, 0, 0.5)";
+
+                // Continuously check whether the popup has been closed
+                const backgroundCheck = setInterval(function () {
+                    if(popup.closed) {
+                        clearInterval(backgroundCheck);
+
+                        console.log("Popup closed");
+
+                        // Remove dim background
+                        document.body.style = "";
+                    }
+                }, 1000);
+            }
+        </script>
+
+  
+        <!-- <button class="nft-button"  onclick="window.location.href = '#NFT'"><span class="button_top">Buy NFT</span></button>
+        <button class="design-button" onclick="window.location.href = '#design'"><span class="button_top">Design my Website</span></button> -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="footer" id="contact">
+    <footer class="foot">
+      <hr class="pre-footer">
+          <h6 class="pre-sign" style="width: 100%;"><a class="lol hero2 glitch layers" data-text="LolCNFT" href="index.html#home"><span>© 2022 - LolCNFT</span></a></h6>
+    
+        </div>
+      </div>
+       </footer>
+</section>
+
+
+  <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+
+</body>
