@@ -262,7 +262,7 @@
   flex-direction: column;
 }
 
-.right {
+.right-txt {
   text-align: right;
   width: 100%;
 }
@@ -1815,6 +1815,20 @@ background-color: rgba(0, 0, 0, 0.432);}
 /*-----------------------------------------------------------
 2. Modal
 -------------------------------------------------------------*/
+#myBtn{
+  padding: 1rem; background-color: rgb(96, 115, 175); margin-bottom: 3rem; font-family: sans-serif;
+  font-weight: 100;
+  font-size: 2rem; border-radius: 20%;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+}
+.policy, .info{
+  font-family: sans-serif;
+font-weight: 100;
+font-size: 1.5rem;
+-webkit-text-fill-color: black;
+-webkit-text-stroke: 1px white; text-align: center;
+}
+.info{font-size: 3rem;}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -1837,6 +1851,7 @@ background-color: rgba(0, 0, 0, 0.432);}
   border: 1px solid #888;
   top: 300px;
   width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
 }
 
 /* The Close Button */
@@ -1856,7 +1871,7 @@ background-color: rgba(0, 0, 0, 0.432);}
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #000000;
   color: white;
 }
 
@@ -1866,7 +1881,7 @@ background-color: rgba(0, 0, 0, 0.432);}
 /* Modal Footer */
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #000000;
   color: white;
 }
 
