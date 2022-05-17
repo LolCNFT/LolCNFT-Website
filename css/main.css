@@ -870,7 +870,7 @@ h2{
 .content-foot {
   width: 100%;
   max-width: 600px;
-  padding: 20px 40px;
+  padding: 20px 20px;
   box-sizing: border-box;
   text-align: center;
   margin-top: 1rem;
@@ -1932,3 +1932,27 @@ background-color: #9dffef;}
 /*-----------------------------------------------------------
 2. Modal
 -------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------
+2. 404
+-------------------------------------------------------------*/
+.body-404{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  height: 100vh;
+}
+.activated::before{
+  opacity: 1;
+}
+.activated::after{
+  background-color: #000;
+}
+.glitch-404{transform: scale(3.5);margin: 2rem 1rem;}
+@media screen and (max-width: 768px) {.glitch-404{transform: scale(2);}.activated{width: 80%;}}
+@media screen and (max-width: 432px) {.glitch-404{transform: scale(1.3);}}
