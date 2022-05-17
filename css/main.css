@@ -1,46 +1,30 @@
 /*-----------------------------------------------------------
-    1  General Styles
-    2  Typography
-    3  Side-Navbar 
-    4  Header
-    5  First Section
-    6  Overview  
-    7  Golfer
-    8  Footer
-    9  Wallet Connect/Buttons
-    10  Sub-Title
-    11  The Team
-    12  Golf Hole
-    13  FAQ
-    14  Battlegolf
-    15 Responsive
-    16 Signature
+  I. INDEX                          (l:22)
+    1  General Styles               (l:25)
+    2  Typography                   (l:49)
+    3  Navbar                       (l:73)
+    4  Button (Colored)             (l:120)
+    5  Section-1                    (l:202) 
+    6  Section-2                    (l:408)
+    7  Section-3                    (l:513)
+    8  Sub-Title                    (l:589)
+    9  Scrollbar                    (l:664)
+    10  Footer                      (l:693)
+    11  Signature                   (l:811)
+  II. WITB                          (l:829)
+    1  Box                          (l:833)
+    2  Modal                        (l:1655)
+  III. Viking                       (l:1779)
+  IV. 404                           (l:1785)
+  V. RESPONSIVE                     (l:1806)
 -------------------------------------------------------------*/
 
-
+/*-----------------------------------------------------------
+    I. INDEX (HTML)
+-------------------------------------------------------------*/
 /*-----------------------------------------------------------
     1. General Styles 
 -------------------------------------------------------------*/
-@font-face {
-  font-family: 'font-title';
-  src: url(/font/HelveticaNowText-Bold.ttf);
-}
-@font-face {
-  font-family: 'font-body';
-  src: url(/font/HelveticaNowText-Regular.ttf);
-}
-@font-face {
-  font-family: 'viking';
-  src: url(/font/Norse-KaWl.otf);
-}
-@font-face {
-  font-family: 'box';
-  src: url(/font/Grandstander-Bold.otf);
-}
-@font-face {
-  font-family: 'pirate';
-  src: url(/font/TradeWinds-Regular.ttf);
-}
   html, body {font-family: 'font-title'; overflow-x: hidden; scroll-behavior: smooth; 
   }
   body{background-color: #000;}
@@ -62,10 +46,29 @@
   a{
     text-decoration: none;
   }
-   /*-----------------------------------------------------------
-     2. Typography 
-   ------------------------------------------------------------*/
-
+/*-----------------------------------------------------------
+  2. Typography 
+------------------------------------------------------------*/
+   @font-face {
+    font-family: 'font-title';
+    src: url(/font/HelveticaNowText-Bold.ttf);
+  }
+  @font-face {
+    font-family: 'font-body';
+    src: url(/font/HelveticaNowText-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'viking';
+    src: url(/font/Norse-KaWl.otf);
+  }
+  @font-face {
+    font-family: 'box';
+    src: url(/font/Grandstander-Bold.otf);
+  }
+  @font-face {
+    font-family: 'pirate';
+    src: url(/font/TradeWinds-Regular.ttf);
+  }
 
 /*-----------------------------------------------------------
   3. Navbar
@@ -109,12 +112,14 @@
   display: flex;
   margin-right: 8rem;
 }
-
-  
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
   }
+  .logo-bar:hover{cursor: pointer;}
+/*-----------------------------------------------------------
+  4. Button (Colored)
+------------------------------------------------------------*/
   .bn5 {
     padding: 0.6em 2em;
     border: none;
@@ -193,46 +198,9 @@
     top: 0;
     border-radius: 10px;
   }
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 768px) {
-    .topnav a {display: none; margin: 0 0;}
-    .topnav a.icon{
-      float: right;
-      display: block;
-    }
-    .topnav button{display: none;}
-    .yggdrasil-bk{background-image: url(https://drive.google.com/uc?id=1w9rEgEZ3nk0hisVkeJWsGMus7yuVFejo) !important;}
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 768px) {
-    .topnav.responsive {position: fixed; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;background-color: rgba(0, 0, 0, 0.466) !important;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin: 1rem;
-    }
-    .topnav-child{
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 4rem;
-      width: 100%;
-      margin-right: 0;
-    }
-    .topnav-child a {
-      width: 100%;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: center;
-    }
-  }
-  .logo-bar:hover{cursor: pointer;}
+
 /*-----------------------------------------------------------
-  4. section-1
+  5. Section-1
 ------------------------------------------------------------*/
 .section-1{
   width: 100%;
@@ -327,17 +295,6 @@
   background-color: #04aa6d7c;
   margin-top: 2rem;
 }
-/* button {
-
- --button_radius: 0.75em;
- --button_color: #e8e8e8;
- --button_outline_color: #000000;
- font-size: 17px;
- font-weight: bold;
- border: none;
- border-radius: var(--button_radius);
- background: var(--button_outline_color);
-} */
 .nft-button{
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -449,7 +406,7 @@ button:active .button_top {
   }
 }
 /*-----------------------------------------------------------
-  5. Section-2
+  6. Section-2
 -------------------------------------------------------------*/
 .section-2{
   display: flex;
@@ -552,34 +509,9 @@ button:active .button_top {
   -webkit-text-fill-color: rgb(255, 255, 255);
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
-@media screen and (max-width: 932px) {
-  .section-1{
-    background-image:url(https://drive.google.com/uc?id=1REpyMjX7hUcdkMG1LpD2EyzjDVg_5e9u) ;
-  }
-  .image-banner-1, .image-banner-2, .image-banner-3, .image-banner-4{
-    background-position: center center !important;
-  }
-  .image-banner-1{
-    background-image:url(https://drive.google.com/uc?id=13JN_KHLXxZ-Dl2y-Hd1xn6kY07HzVgW1) ;
-  }
-  .image-banner-4{
-    background-image:url(https://drive.google.com/uc?id=1XVx2uBOqJb-HQAX4TVen1Jbo47rb5TnI) ;
-  }
-  .title-nft{
-    font-size: 1.7rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    
-  }
-  .boxx{
-    color: #67ffeb;
-    -webkit-text-fill-color: rgb(255, 0, 200);
-  }
-  .title-nft h3, .title-nft h6{
-    margin: 0 .1rem;
-  }
-}
-    /*-----------------------------------------------------------
-  15. Section-3
+
+/*-----------------------------------------------------------
+  7. Section-3
 -------------------------------------------------------------*/
 .section-3{
   display: flex;
@@ -655,7 +587,7 @@ button:active .button_top {
   opacity: 1;
 }
 /*-----------------------------------------------------------
-  15. Sub-title
+  8. Sub-title
 -------------------------------------------------------------*/
 .sub-title h2{
   text-align: center;
@@ -683,27 +615,7 @@ hr{
   background-color: #fff;
 
 }
-@media screen and (max-width: 768px) {
-  .container-1 h1{
-    font-size: 2rem;
-  }
-  .sub-title h2{
-    font-size: 1.6rem;
-  }
-  .container-1 h4, .container-2 h4{
-    font-size: 1.3rem;
-  }
-  .stake-button{
-    width: 100%;
-    font-size: 1rem;
-  }
-  #text{
-    width: 70%;
-  }
-  .grid-web{
-    margin: 0 0rem;
-  }
-}
+
 .bb::before, .bb::after{
   position: absolute;
   top: 0;
@@ -734,9 +646,6 @@ hr{
 .bb::before {
   animation-delay: -4s;
 }
-
-
-
 @keyframes clipMe {
   0%, 100% {
     clip: rect(0px, 220px, 2px, 0px);
@@ -752,8 +661,8 @@ hr{
   }
 }
 
-    /*-----------------------------------------------------------
-  15. Scrollbar
+/*-----------------------------------------------------------
+  9. Scrollbar
 -------------------------------------------------------------*/
 ::-webkit-scrollbar-track
 {
@@ -782,7 +691,7 @@ hr{
        
 }
 /*-----------------------------------------------------------
-  8. Footer
+  10. Footer
 -------------------------------------------------------------*/
 .pre-footer{
   width: 100%;
@@ -899,8 +808,8 @@ h2{
 }
 .pfp:hover{cursor: pointer;}
 
-    /*-----------------------------------------------------------
-  15. Signature
+/*-----------------------------------------------------------
+  11. Signature
 -------------------------------------------------------------*/
 @font-face {
   font-family: 'pixel';
@@ -919,68 +828,8 @@ h2{
   width: 100%; background-color: #000;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------------------------------
-  WITB
+II.  WITB (HTML)
 -------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
@@ -1797,30 +1646,7 @@ background-color: rgba(0, 0, 0, 0.432);}
           animation-delay: 10s;
           -webkit-animation: blink1 2s steps(50, start) infinite alternate;
           }
-        /* Tooltip container */
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-left: 50%;
-bottom: 195px;
-}
-.policy{margin-top: 2rem;}
-.info{margin-top: 3rem;}
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-.copy-txt:hover{cursor: pointer;}
+
           .base64 {background-size: cover;
           -moz-background-size: cover;
           -webkit-background-size: cover;
@@ -1831,6 +1657,29 @@ bottom: 195px;
 /*-----------------------------------------------------------
 2. Modal
 -------------------------------------------------------------*/
+/* Tooltip container */
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+/* Position the tooltip text - see examples below! */
+  position: absolute; 
+  z-index: 1; 
+  left: 50%;
+  bottom: 195px;
+}
+.policy{margin-top: 2rem;}
+.info{margin-top: 3rem;}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.copy-txt:hover{cursor: pointer;}
 #myBtn{
   padding: 1rem;
   color: #000;
@@ -1927,17 +1776,15 @@ background-color: #9dffef;}
   from {top: -300px; opacity: 0}
   to {top: 300px; opacity: 1}
 }
+
+/*-----------------------------------------------------------
+III. Viking (HTML)
+-------------------------------------------------------------*/
 .mint-viking{margin-top: 2rem;}
 .mint-viking:hover{cursor: pointer;}
-/*-----------------------------------------------------------
-2. Modal
--------------------------------------------------------------*/
-
-
-
 
 /*-----------------------------------------------------------
-2. 404
+IV. 404 (HTML)
 -------------------------------------------------------------*/
 .body-404{
   display: flex;
@@ -1954,5 +1801,93 @@ background-color: #9dffef;}
   background-color: #000;
 }
 .glitch-404{transform: scale(3.5);margin: 2rem 1rem;}
+
+/*-----------------------------------------------------------
+RESPONSIVE
+-------------------------------------------------------------*/
 @media screen and (max-width: 768px) {.glitch-404{transform: scale(2);}.activated{width: 80%;}}
 @media screen and (max-width: 432px) {.glitch-404{transform: scale(1.3);}}
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 768px) {
+    .topnav a {display: none; margin: 0 0;}
+    .topnav a.icon{
+      float: right;
+      display: block;
+    }
+    .topnav button{display: none;}
+    .yggdrasil-bk{background-image: url(https://drive.google.com/uc?id=1w9rEgEZ3nk0hisVkeJWsGMus7yuVFejo) !important;}
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 768px) {
+    .topnav.responsive {position: fixed; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;background-color: rgba(0, 0, 0, 0.466) !important;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 1rem;
+    }
+    .topnav-child{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+      width: 100%;
+      margin-right: 0;
+    }
+    .topnav-child a {
+      width: 100%;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 932px) {
+    .section-1{
+      background-image:url(https://drive.google.com/uc?id=1REpyMjX7hUcdkMG1LpD2EyzjDVg_5e9u) ;
+    }
+    .image-banner-1, .image-banner-2, .image-banner-3, .image-banner-4{
+      background-position: center center !important;
+    }
+    .image-banner-1{
+      background-image:url(https://drive.google.com/uc?id=13JN_KHLXxZ-Dl2y-Hd1xn6kY07HzVgW1) ;
+    }
+    .image-banner-4{
+      background-image:url(https://drive.google.com/uc?id=1XVx2uBOqJb-HQAX4TVen1Jbo47rb5TnI) ;
+    }
+    .title-nft{
+      font-size: 1.7rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      
+    }
+    .boxx{
+      color: #67ffeb;
+      -webkit-text-fill-color: rgb(255, 0, 200);
+    }
+    .title-nft h3, .title-nft h6{
+      margin: 0 .1rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container-1 h1{
+      font-size: 2rem;
+    }
+    .sub-title h2{
+      font-size: 1.6rem;
+    }
+    .container-1 h4, .container-2 h4{
+      font-size: 1.3rem;
+    }
+    .stake-button{
+      width: 100%;
+      font-size: 1rem;
+    }
+    #text{
+      width: 70%;
+    }
+    .grid-web{
+      margin: 0 0rem;
+    }
+  }
