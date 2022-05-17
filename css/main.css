@@ -759,7 +759,10 @@ hr{
 {
   box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-	background-color: #1f0a0a;
+  background: #161616;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #161616, #313131);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #161616, #313131); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 	border-radius: 20px;
 }
 
@@ -773,12 +776,10 @@ hr{
 {
 	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
-	background-image: -webkit-gradient(linear,
-									   40% 0%,
-									   75% 84%,
-									   from(#ffffff),
-									   to(#000000));
-                     
+  background: #747474;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #8d8d8d, #747474);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #8d8d8d, #747474); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       
 }
 /*-----------------------------------------------------------
   8. Footer
@@ -915,6 +916,8 @@ h2{
   text-indent: .5rem;
   margin-top: 0rem;
   border-radius: 15px;
+  width: 100%; background-color: #000;
+
 }
 
 
