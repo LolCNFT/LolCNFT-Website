@@ -7,7 +7,7 @@ function myFunction() {
       x.className = "topnav";
     }
   }
-  // When the user scrolls down 80px from the top of the document, resize the myTopnav's padding and the logo's font size
+  // When the user scrolls down from the top of the document, resize the myTopnav's padding and the logo's font size
   window.onscroll = function() {scrollFunction()};
   
   function scrollFunction() {
@@ -76,7 +76,7 @@ window.onload = function () {
 };
 
 
-
+/*Sold Out!*/
 function alert1(){
   document.getElementById("alert").innerHTML="Sold Out!";
   document.getElementById("alert").style.backgroundColor="black";
