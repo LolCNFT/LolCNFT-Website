@@ -184,6 +184,37 @@
        </footer>
   </section>
 <!-- Scripts -->
+<script>
+  /*-----------------------------------------------------------
+2. PFP
+-------------------------------------------------------------*/
+let images = ['https://bafybeibi74lgqgl5n224cutkmeurfdtnx6psenrr2qekhdcrup4v6ncbhu.ipfs.infura-ipfs.io/', 'https://bafybeicqeo4lfn54kqj6axwrhyw2mdev6h3jonl6qmltc3hip5etzvr74a.ipfs.infura-ipfs.io/', 'https://bafybeiazdoy6fdi4fqc5ssxmj6f26qaucm6no5fxrd5clgqdowi7xhabgu.ipfs.infura-ipfs.io/', 'https://bafybeibjp5ajtfudanpla7ylhrjrtqdlqmeiaia6y2jrbnokq5yo5lzng4.ipfs.infura-ipfs.io/', 'https://bafybeigon75dp62reukaoftuyk32jqu4nbx26qxl6p6sm76zjmewegoiye.ipfs.infura-ipfs.io/'];
+// let link = ['https://twitter.com/UglybrosNFT', 'https://twitter.com/BlockOwls', 'https://twitter.com/_nemonium', 'https://twitter.com/MosieAlong', 'https://twitter.com/CryptoRaggies'];
+let index = 0;
+const imgElement = document.querySelector('#mainPhoto');
+// const imageLink = document.getElementById('#linkProject')
+function change() {
+   imgElement.src = images[index];
+   index > 3 ? index = 0 : index++;
+}
+window.onload = function () {
+    setInterval(change, 7000);
+};
+
+
+/*Sold Out!*/
+function alert1(){
+  document.getElementById("alert").innerHTML="Sold Out!";
+  document.getElementById("alert").style.backgroundColor="black";
+  
+  setTimeout(function(){
+    document.getElementById("alert").innerHTML="";
+  document.getElementById("alert").style.backgroundColor="transparent";
+
+    },3000);
+
+   }
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 

@@ -2,45 +2,45 @@
 
 let bandera = 0;
 
-function myFun() {
-  if (bandera == 0) {
-    bandera = 1;
-    var ob = document.getElementById("front");
-    ob.classList.add("base64");
-    var ob = document.getElementById("rightt");
-    ob.classList.add("base64");
-    var ob = document.getElementById("left");
-    ob.classList.add("base64");
-    var ob = document.getElementById("backk");
-    ob.classList.add("base64");
-    var ob = document.getElementById("coverleft");
-    ob.classList.add("base64");
-    var ob = document.getElementById("coverright");
-    ob.classList.add("base64");
-    var ob = document.getElementById("coverfront");
-    ob.classList.add("base64");
-    var ob = document.getElementById("coverback");
-    ob.classList.add("base64");
-  }else{
-    bandera = 0;
-    var ob = document.getElementById("front");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("rightt");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("left");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("backk");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("coverleft");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("coverright");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("coverfront");
-    ob.classList.remove("base64");
-    var ob = document.getElementById("coverback");
-    ob.classList.remove("base64"); 
-  }
-}
+// function myFun() {
+//   if (bandera == 0) {
+//     bandera = 1;
+//     var ob = document.getElementById("front");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("rightt");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("left");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("backk");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("coverleft");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("coverright");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("coverfront");
+//     ob.classList.add("base64");
+//     var ob = document.getElementById("coverback");
+//     ob.classList.add("base64");
+//   }else{
+//     bandera = 0;
+//     var ob = document.getElementById("front");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("rightt");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("left");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("backk");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("coverleft");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("coverright");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("coverfront");
+//     ob.classList.remove("base64");
+//     var ob = document.getElementById("coverback");
+//     ob.classList.remove("base64"); 
+//   }
+// }
 
 // const clases = ["bkk", "bkk2", "bkk3", "bkk4"];
 
@@ -61,6 +61,120 @@ else{
     ob.classList.remove('bkk');
    
   }
+}
+
+//drag drop & one click
+"use strict";
+let oldURL = null;
+function catchDrag(event) {
+  event.dataTransfer.dropEffect = "copy"
+  event.preventDefault();
+}
+document.body.addEventListener("dragenter", catchDrag);
+document.body.addEventListener("dragover",  catchDrag);
+document.body.addEventListener("drop", function( event) {
+  event.preventDefault();
+  event.stopPropagation();
+  const file = event.dataTransfer.files[0];
+  let newURL = URL.createObjectURL( file);
+  if( oldURL) {
+      URL.revokeObjectURL(oldURL);
+  }
+  oldURL = newURL;
+  document.getElementById("divID")
+      .style.backgroundImage = `url("${newURL}")`;
+  document.getElementById("front")
+  .style.backgroundImage = `url("${newURL}")`;
+  document.getElementById("rightt")
+  .style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("left")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("backk")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("coverleft")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("coverright")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("coverfront")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("coverback")
+.style.backgroundImage = `url("${newURL}")`;
+
+document.getElementById("tap")
+.style.backgroundImage = `url("${newURL}")`;
+
+});
+function myFun(){
+document.getElementById("divID")
+      .style.backgroundImage = `none`;
+  document.getElementById("front")
+  .style.backgroundImage = `none`;
+  document.getElementById("rightt")
+  .style.backgroundImage = `none`;
+
+document.getElementById("left")
+.style.backgroundImage = `none`;
+
+document.getElementById("backk")
+.style.backgroundImage = `none`;
+
+document.getElementById("coverleft")
+.style.backgroundImage = `none`;
+
+document.getElementById("coverright")
+.style.backgroundImage = `none`;
+
+document.getElementById("coverfront")
+.style.backgroundImage = `none`;
+
+document.getElementById("coverback")
+.style.backgroundImage = `none`;
+
+document.getElementById("tap")
+.style.backgroundImage = `none`;
+}
+
+let flag = 0;
+
+function openLid(){
+var back =  document.getElementById('coverback');
+var right =  document.getElementById('coverright');
+var left =  document.getElementById('coverleft'); 
+var front =  document.getElementById('coverfront');
+var txt =  document.getElementById('txt');
+var txt2 =  document.getElementById('txt2');
+var txt3 =  document.getElementById('txt3');
+let content = document.getElementById('content')
+if (flag == 0){
+  flag = 1;
+  front.classList.add('front-cover');
+  back.classList.add('back-cover');
+  left.classList.add('left-cover');
+  right.classList.add('right-cover');
+  content.classList.add('content-active');
+  txt.classList.add('txt-active');
+  txt2.classList.add('txt2-active');
+  txt3.classList.add('txt3-active');
+}
+else {
+  flag = 0;
+  front.classList.remove('front-cover');
+  back.classList.remove('back-cover');
+  left.classList.remove('left-cover');
+  right.classList.remove('right-cover');
+  content.classList.remove('content-active');
+  txt.classList.remove('txt-active');
+  txt2.classList.remove('txt2-active');
+  txt3.classList.remove('txt3-active');
+
+}
+
 }
   //copy txt
   function copyTextToClipboard(text) {
@@ -119,17 +233,17 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-function alert(){
-  const message = document.getElementById(alert);
-  message.style.opacity = 1;
-  message.style.display = 'inline';
-  if (message.style.opacity != 0){
-    message.style.opacity -= 1;
-  } 
-  else{
-    message.style.display = 'none';
-  }
-}
+// function alert(){
+//   const message = document.getElementById(alert);
+//   message.style.opacity = 1;
+//   message.style.display = 'inline';
+//   if (message.style.opacity != 0){
+//     message.style.opacity -= 1;
+//   } 
+//   else{
+//     message.style.display = 'none';
+//   }
+// }
 
 
 
@@ -145,5 +259,5 @@ function myFunctionCopy() {
     navigator.clipboard.writeText(copyText.value);
     
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    console.log("Copied the text: " + copyText.value);
     }
