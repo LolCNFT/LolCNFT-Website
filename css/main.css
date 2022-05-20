@@ -17,6 +17,7 @@
   III. Viking                       (l:1779)
   IV. 404                           (l:1785)
   V. RESPONSIVE                     (l:1806)
+  VI. CardanoScapes                 (l:1907)
 -------------------------------------------------------------*/
 
 /*-----------------------------------------------------------
@@ -474,7 +475,15 @@ button:active .button_top {
   -moz-box-shadow: 0 0 15px #ffffff;
   box-shadow: 0px 0px 15px #ffffff;
 }
-#image-banner:hover, #image-banner-2:hover, #image-banner-3:hover, #image-banner-4:hover{
+.image-banner-5{
+  background-image: url(https://drive.google.com/uc?id=1XJjgGLAyqVx2Ly9JtZsCkogArbwbY71k) ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgb(4, 4, 4);
+  -moz-box-shadow: 0 0 15px #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
+}
+#image-banner:hover, #image-banner-2:hover, #image-banner-3:hover, #image-banner-4:hover, #image-banner-5:hover{
   transform: translate3d(0, -10px, 0);
   -webkit-transform: translate3d(0, -10px, 0);
   box-shadow: 0 0px 40px rgba(255, 255, 255, 0.2);
@@ -483,7 +492,7 @@ button:active .button_top {
 #image-banner:hover{
   box-shadow: 0 0px 40px #fec8e2
 }
-#image-banner:active, #image-banner-2:active, #image-banner-3:active, #image-banner-4:active{
+#image-banner:active, #image-banner-2:active, #image-banner-3:active, #image-banner-4:active, #image-banner-5:active{
   transform: scale(0.9);
   box-shadow: 0 0px 10px rgba(255, 255, 255, 0.2);
 }
@@ -505,7 +514,7 @@ button:active .button_top {
   -webkit-text-fill-color: rgb(0, 255, 200);
 -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
-.ada, .pirates{
+.ada, .pirates, .landscape{
   -webkit-text-fill-color: rgb(255, 255, 255);
   -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
@@ -1857,7 +1866,7 @@ RESPONSIVE
     .section-1{
       background-image:url(https://drive.google.com/uc?id=1REpyMjX7hUcdkMG1LpD2EyzjDVg_5e9u) ;
     }
-    .image-banner-1, .image-banner-2, .image-banner-3, .image-banner-4{
+    .image-banner-1, .image-banner-2, .image-banner-3, .image-banner-4, .image-banner-5{
       background-position: center center !important;
     }
     .image-banner-1{
@@ -1901,3 +1910,107 @@ RESPONSIVE
     }
     .body-box{position: absolute;}
   }
+
+
+/*-----------------------------------------------------------
+V. CardanoScapes (HTML)
+-------------------------------------------------------------*/
+
+  #drag-container, #spin-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    -webkit-transform: rotateX(-10deg);
+        transform: rotateX(-10deg);
+    }
+    
+    #drag-container img, #drag-container video {
+    -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+    -webkit-box-shadow: 0 0 8px #fff;
+        box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    }
+    
+    #drag-container img:hover, #drag-container video:hover {
+    -webkit-box-shadow: 0 0 15px #fffd;
+        box-shadow: 0 0 15px #fffd;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+    }
+    
+    #drag-container p {
+    font-family: Serif;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+        transform: translate(-50%,-50%) rotateX(90deg);
+    color: #fff;
+    }
+    
+    #ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+        transform: translate(-50%,-50%) rotateX(90deg);
+    background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+    }
+    
+    #music-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    
+    @-webkit-keyframes spin {
+    from{
+      -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+    } to{
+      -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+    }
+    }
+    
+    @keyframes spin {
+    from{
+      -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+    } to{
+      -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+    }
+    }
+    @-webkit-keyframes spinRevert {
+    from{
+      -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+    } to{
+      -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+    }
+    }
+    @keyframes spinRevert {
+    from{
+      -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+    } to{
+      -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+    }
+    }
