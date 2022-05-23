@@ -1794,7 +1794,10 @@ background-color: #9dffef;}
   from {top: -300px; opacity: 0}
   to {top: 300px; opacity: 1}
 }
-
+#bk{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*-----------------------------------------------------------
 III. Viking (HTML)
 -------------------------------------------------------------*/

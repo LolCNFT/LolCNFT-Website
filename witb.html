@@ -72,7 +72,7 @@
     <div class="boddy" id="bk" >
     
 
-        <div class="box " >
+        <div class="box " id="box">
             <div class="face bottomm" >
             </div>
             <div class="face back" id="backk">
@@ -106,8 +106,8 @@
               </div>
               
               <div class="label" >
-                <button onclick="myFun()" class="buttoonClass" >Skin</button>
-                <button onclick="myFun2()" class="buttoonClass">Background</button>
+                <button onclick="document.getElementById('file-input').click();" class="buttoonClass" >Skin</button>
+                <button onclick="document.getElementById('file-input-2').click();" class="buttoonClass">Background</button>
                 
               </div>
               
@@ -178,11 +178,12 @@
                 </div>
               </div>
               <div id="divID"></div>
-        
         </div>
         <div class=" txt " id="txt"></div>
         <div class="txt2" id="txt2"><h1 class="txt3" id="txt3">Click Mint!<span>&#160;</span></h1></div>
         </div>
+        <input id="file-input" type="file" name="name" accept="image/*" style="display: none;" />
+        <input id="file-input-2" type="file" name="name" accept="image/*" style="display: none;" />
         <div style="display: flex; flex-direction: column; align-items: center;">
           <a id="myBtn" target="_blank" class="a mintt bn5">Mint!</a>
           <p class="policy">Policy ID: <span id="copy" class="copy-txt tooltip" style="overflow-wrap: break-word; margin: 0 1rem;">5ded942a9ae524354dbba9101cc8705b5d1926238eb55b1e3415fcbd<span class="tooltiptext">Copy</span></span</p>

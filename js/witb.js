@@ -1,69 +1,42 @@
 /*box*/
-
-let bandera = 0;
-
-// function myFun() {
-//   if (bandera == 0) {
-//     bandera = 1;
-//     var ob = document.getElementById("front");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("rightt");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("left");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("backk");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("coverleft");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("coverright");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("coverfront");
-//     ob.classList.add("base64");
-//     var ob = document.getElementById("coverback");
-//     ob.classList.add("base64");
-//   }else{
-//     bandera = 0;
-//     var ob = document.getElementById("front");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("rightt");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("left");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("backk");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("coverleft");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("coverright");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("coverfront");
-//     ob.classList.remove("base64");
-//     var ob = document.getElementById("coverback");
-//     ob.classList.remove("base64"); 
-//   }
-// }
-
-// const clases = ["bkk", "bkk2", "bkk3", "bkk4"];
-
-//const random = clases[Math.floor(Math.random() * clases.length)];
-
-function myFun2() {
-
-  if (bandera == 0) {
-
-    bandera = 1;
-    var ob = document.getElementById("bk");
-    ob.classList.add('bkk');
+var input = document.getElementById('file-input');
+input.onchange = e => { 
+  // getting a hold of the file reference
+  var file = e.target.files[0]; 
+  // setting up the reader
+  var reader = new FileReader();
+  reader.readAsDataURL(file); // this is reading as data url
+  // here we tell the reader what to do when it's done reading...
+  var back =  document.getElementById('coverback');
+      var right =  document.getElementById('coverright');
+      var left =  document.getElementById('coverleft'); 
+      var front =  document.getElementById('coverfront');
+  reader.onload = readerEvent => {
+      var content = readerEvent.target.result; // this is the content!
+      document.querySelector('#left').style.backgroundImage = 'url('+ content +')';
+      document.querySelector('#rightt').style.backgroundImage = 'url('+ content +')';
+      document.querySelector('#backk').style.backgroundImage = 'url('+ content +')';
+      document.querySelector('#tap').style.backgroundImage = 'url('+ content +')';
+      document.querySelector('#front').style.backgroundImage = 'url('+ content +')';
+      back.style.backgroundImage = 'url('+ content +')';
+      right.style.backgroundImage = 'url('+ content +')';
+      left.style.backgroundImage = 'url('+ content +')';
+      front.style.backgroundImage = 'url('+ content +')';
+    }
 }
-
-else{
-    bandera = 0;
-    var ob = document.getElementById("bk");
-    ob.classList.remove('bkk');
-   
-  }
+var input2 = document.getElementById('file-input-2');
+input2.onchange = e => { 
+  // getting a hold of the file reference
+  var file = e.target.files[0]; 
+  // setting up the reader
+  var reader = new FileReader();
+  reader.readAsDataURL(file); // this is reading as data url
+  // here we tell the reader what to do when it's done reading...
+  reader.onload = readerEvent => {
+      var content = readerEvent.target.result; // this is the content!
+      document.querySelector('#bk').style.backgroundImage = 'url('+ content +')';
+    }
 }
-
-//drag drop & one click
 "use strict";
 let oldURL = null;
 function catchDrag(event) {
@@ -81,98 +54,79 @@ document.body.addEventListener("drop", function( event) {
       URL.revokeObjectURL(oldURL);
   }
   oldURL = newURL;
-  document.getElementById("divID")
-      .style.backgroundImage = `url("${newURL}")`;
-  document.getElementById("front")
-  .style.backgroundImage = `url("${newURL}")`;
-  document.getElementById("rightt")
-  .style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("left")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("backk")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("coverleft")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("coverright")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("coverfront")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("coverback")
-.style.backgroundImage = `url("${newURL}")`;
-
-document.getElementById("tap")
-.style.backgroundImage = `url("${newURL}")`;
+  document.getElementById("bk").style.backgroundImage = `url("${newURL}")`;
 
 });
-function myFun(){
-document.getElementById("divID")
-      .style.backgroundImage = `none`;
+box = document.getElementById('box')
+box.addEventListener("dragenter", catchDrag);
+box.addEventListener("dragover",  catchDrag);
+box.addEventListener("drop", function( event) {
+  event.preventDefault();
+  event.stopPropagation();
+  const file = event.dataTransfer.files[0];
+  let newURL = URL.createObjectURL( file);
+  if( oldURL) {
+      URL.revokeObjectURL(oldURL);
+  }
+  oldURL = newURL;
   document.getElementById("front")
-  .style.backgroundImage = `none`;
+  .style.backgroundImage = `url("${newURL}")`;
   document.getElementById("rightt")
-  .style.backgroundImage = `none`;
+  .style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("left")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("backk")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("coverleft")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("coverright")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("coverfront")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("coverback")
-.style.backgroundImage = `none`;
+.style.backgroundImage = `url("${newURL}")`;
 
 document.getElementById("tap")
-.style.backgroundImage = `none`;
-}
-
+.style.backgroundImage = `url("${newURL}")`;
+});
 let flag = 0;
-
 function openLid(){
 var back =  document.getElementById('coverback');
 var right =  document.getElementById('coverright');
 var left =  document.getElementById('coverleft'); 
 var front =  document.getElementById('coverfront');
-var txt =  document.getElementById('txt');
-var txt2 =  document.getElementById('txt2');
-var txt3 =  document.getElementById('txt3');
-let content = document.getElementById('content')
+let content = document.getElementById('content');
+var txt = document.getElementById('txt')
+var txt2 = document.getElementById('txt2')
+var txt3 = document.getElementById('txt3')
 if (flag == 0){
-  flag = 1;
-  front.classList.add('front-cover');
-  back.classList.add('back-cover');
-  left.classList.add('left-cover');
-  right.classList.add('right-cover');
-  content.classList.add('content-active');
-  txt.classList.add('txt-active');
-  txt2.classList.add('txt2-active');
-  txt3.classList.add('txt3-active');
+flag = 1;
+front.classList.add('front-cover');
+
+back.classList.add('back-cover');
+left.classList.add('left-cover');
+right.classList.add('right-cover');
+content.classList.add('content-active');
+txt.classList.add('txt-active');
+txt2.classList.add('txt2-active');
+txt3.classList.add('txt3-active');
 }
 else {
-  flag = 0;
-  front.classList.remove('front-cover');
-  back.classList.remove('back-cover');
-  left.classList.remove('left-cover');
-  right.classList.remove('right-cover');
-  content.classList.remove('content-active');
-  txt.classList.remove('txt-active');
-  txt2.classList.remove('txt2-active');
-  txt3.classList.remove('txt3-active');
-
+flag = 0;
+front.classList.remove('front-cover');
+back.classList.remove('back-cover');
+left.classList.remove('left-cover');
+right.classList.remove('right-cover');
+content.classList.remove('content-active');
+txt.classList.remove('txt-active');
+txt2.classList.remove('txt2-active');
+txt3.classList.remove('txt3-active');
 }
 
 }
