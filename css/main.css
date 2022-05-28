@@ -1798,6 +1798,7 @@ background-color: #9dffef;}
   background-repeat: no-repeat;
   background-size: cover;
 }
+.recycled:hover{cursor: pointer;}
 /*-----------------------------------------------------------
 III. Viking (HTML)
 -------------------------------------------------------------*/
