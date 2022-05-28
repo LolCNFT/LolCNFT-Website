@@ -137,16 +137,21 @@ var right =  document.getElementById('coverright');
 var left =  document.getElementById('coverleft'); 
 var front =  document.getElementById('coverfront');
 let content = document.getElementById('content');
+let txt = document.getElementById('txt');
+let txt2 = document.getElementById('txt2');
+let txt3 = document.getElementById('txt3');
 // let hand = document.getElementById('hand')
 // let finger1 = document.getElementsByClassName('finger');
 if (flag == 0){
   flag = 1;
   front.classList.add('front-cover');
-
   back.classList.add('back-cover');
   left.classList.add('left-cover');
   right.classList.add('right-cover');
   content.classList.add('content-active');
+  txt.classList.add('txt-active');
+  txt2.classList.add('txt2-active');
+  txt3.classList.add('txt3-active');
 //     hand.classList.add('hand-active');
 
 }
@@ -157,7 +162,9 @@ else {
   left.classList.remove('left-cover');
   right.classList.remove('right-cover');
   content.classList.remove('content-active');
-
+  txt.classList.remove('txt-active');
+  txt2.classList.remove('txt2-active');
+  txt3.classList.remove('txt3-active');
 }
 }
 input.click();
