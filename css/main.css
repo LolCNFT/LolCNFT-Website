@@ -280,14 +280,15 @@
 }
 
 @keyframes glitch {
-  0% {
+  0%, 6%, 13% {
     text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
     transform: translate(var(--glitch-translate));
   }
-  2% {
+  2%, 8%, 11%{
     text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
   }
-  4%, 100% {  text-shadow: none; transform: none; }
+
+  4%, 9%, 14%, 100% {  text-shadow: none; transform: none; }
 }
 .main-title a{
   color: white;
