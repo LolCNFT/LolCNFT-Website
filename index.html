@@ -168,11 +168,13 @@
     <footer class="foot">
       <hr class="pre-footer">
       <div class="container-4">
-        <div class="avatar">
+        <h6 style="color: white; margin-bottom: 2em;">Click to play!</h6>
+        <div class="avatar" onclick="window.open('https://cryptoraggies.io/raggierun', '_blank');">
           <a class="pfp" id="linkProject">
-            <img id="mainPhoto" src="https://bafybeigon75dp62reukaoftuyk32jqu4nbx26qxl6p6sm76zjmewegoiye.ipfs.infura-ipfs.io/"  alt="pfp" />
+            <img id="mainPhoto" src="https://ipfs.blockfrost.dev/ipfs/QmcEVjDWEFEzB3D2jFayG8fNYtf3QvmztvEUY79FGkRU3r"  alt="pfp" />
           </a>
         </div>
+         <!-- https://ipfs.blockfrost.dev/ipfs/QmR6gcoi1A4GPhWngebaTSw5ntN9GiKFwLJ8KoFjgDb2Ex -->
         <div class="content-foot">
           <h2>CONTACT ME!</h2>
           <!-- <p>Follow me on:</p> -->
@@ -195,18 +197,18 @@
   /*-----------------------------------------------------------
 2. PFP
 -------------------------------------------------------------*/
-let images = ['https://bafybeibi74lgqgl5n224cutkmeurfdtnx6psenrr2qekhdcrup4v6ncbhu.ipfs.infura-ipfs.io/', 'https://bafybeieakri3svqteuaiagispw3ag77pjdvhgmxgiwmjhoiiw6a3zwbbau.ipfs.infura-ipfs.io/', 'https://bafybeigon75dp62reukaoftuyk32jqu4nbx26qxl6p6sm76zjmewegoiye.ipfs.infura-ipfs.io/'];
-// let link = ['https://twitter.com/UglybrosNFT', 'https://twitter.com/BlockOwls', 'https://twitter.com/_nemonium', 'https://twitter.com/MosieAlong', 'https://twitter.com/CryptoRaggies'];
-let index = 0;
-const imgElement = document.querySelector('#mainPhoto');
-// const imageLink = document.getElementById('#linkProject')
-function change() {
-   imgElement.src = images[index];
-   index > 1 ? index = 0 : index++;
-}
-window.onload = function () {
-    setInterval(change, 5000);
-};
+// let images = ['https://bafybeibi74lgqgl5n224cutkmeurfdtnx6psenrr2qekhdcrup4v6ncbhu.ipfs.infura-ipfs.io/', 'https://ipfs.blockfrost.dev/ipfs/QmWybU3wprJvsjHfaQX7a83HavDAfDEVzuiYRJfUfFCxPv'];
+// // let link = ['https://twitter.com/UglybrosNFT', 'https://twitter.com/BlockOwls', 'https://twitter.com/_nemonium', 'https://twitter.com/MosieAlong', 'https://twitter.com/CryptoRaggies'];
+// let index = 0;
+// const imgElement = document.querySelector('#mainPhoto');
+// // const imageLink = document.getElementById('#linkProject')
+// function change() {
+//    imgElement.src = images[index];
+//    index > 1 ? index = 0 : index++;
+// }
+// window.onload = function () {
+//     setInterval(change, 5000);
+// };
 
 
 /*Sold Out!*/
